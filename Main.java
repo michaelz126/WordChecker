@@ -2,29 +2,40 @@ import java.util.ArrayList;
 public class Main {
     public static void main (String[] args)
     {
-    
-    WordChecker w = new WordChecker();
+    ArrayList<String> words = new ArrayList<String>();
     ArrayList<String> words1 = new ArrayList<String>();
-    WordChecker x = new WordChecker(words);
-    createList("cat");
-    createList("catch");
-    createList("dog");
+    WordChecker w = new WordChecker(words);
+    WordChecker x = new WordChecker(words1);
     
-
-    
-    words1.add("an");
-     
-    words1.add("band");
+    //part a
+    //test case 1
+    words.add("an");    
+    words.add("band");
     words.add("band");
     words.add("abandon"); 
-    /* 
-    words.add("to");
-    words.add("too");
-    words.add("stool");
-    words.add("tools"); */
     System.out.println(words);
+    System.out.println(w.isWordChain());
+
+    //test case 2
+    words1.add("to");
+    words1.add("too");
+    words1.add("stool");
+    words1.add("tools"); 
+    System.out.println(words1);
     System.out.println(x.isWordChain());
-    System.out.println(a);
+    
+    //part b
+    ArrayList<String> cat = new ArrayList<String>();
+    WordChecker b = new WordChecker(cat);
+    cat.add("catch");
+    cat.add("bobcat");
+    cat.add("catchacat");
+    cat.add("cat");
+    cat.add("at");
+
+    System.out.println(b.createList("cat"));
+    System.out.println(b.createList("catch"));
+    System.out.println(b.createList("dog"));
     
     }
 }
